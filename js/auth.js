@@ -35,7 +35,6 @@ loginForm.addEventListener('submit', async (e) => {
                 'Authorization': `Basic ${encodedCredentials}`
             },
             mode: 'cors',
-            credentials: 'include'
         });
         
         if (!response.ok) {

@@ -32,7 +32,6 @@ async function executeQuery(query, variables = {}) {
                 'Authorization': `Bearer ${jwt}`
             },
             mode: 'cors',
-            credentials: 'include',
             body: JSON.stringify({
                 query: query,
                 variables: variables
