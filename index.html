@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - GraphQL</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <div class="profile-container">
+        <header class="profile-header">
+            <div class="header-content">
+                <h1>My Profile</h1>
+                <button id="logoutBtn" class="btn-logout">Logout</button>
+            </div>
+        </header>
+        
+        <main class="profile-main">
+            <section class="card user-info">
+                <h2>User Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label">ID:</span>
+                        <span class="value" id="userId">Loading...</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Login:</span>
+                        <span class="value" id="userLogin">Loading...</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Email:</span>
+                        <span class="value" id="userEmail">Loading...</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="card xp-section">
+                <h2>Experience Points</h2>
+                <div class="xp-total">
+                    <span class="xp-label">Total XP:</span>
+                    <span class="xp-value" id="totalXp">0</span>
+                </div>
+                <div class="xp-details" id="xpDetails">
+                </div>
+            </section>
+            
+            <section class="card audit-section">
+                <h2>Audit Information</h2>
+                <div class="audit-grid">
+                    <div class="audit-item">
+                        <span class="label">Audits Done:</span>
+                        <span class="value" id="auditsDone">0</span>
+                    </div>
+                    <div class="audit-item">
+                        <span class="label">Audits Received:</span>
+                        <span class="value" id="auditsReceived">0</span>
+                    </div>
+                    <div class="audit-item">
+                        <span class="label">Audit Ratio:</span>
+                        <span class="value" id="auditRatio">0.0</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="card stats-section">
+                <h2>Statistics & Graphs</h2>
+                
+                <div class="chart-container">
+                    <h3>XP Progress Over Time</h3>
+                    <svg id="xpChart" width="100%" height="300" viewBox="0 0 800 300">
+                    </svg>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Top Projects by XP</h3>
+                    <svg id="projectChart" width="100%" height="300" viewBox="0 0 800 300">
+                    </svg>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Project Success Rate</h3>
+                    <svg id="successChart" width="100%" height="300" viewBox="0 0 400 300">
+                    </svg>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="js/graphql.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
